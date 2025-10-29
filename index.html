@@ -19,10 +19,30 @@
       <button>Get Space Images</button>
     </div>
 
+    <!-- Random space fact shown on each page load -->
+    <section id="randomFact" class="random-fact" aria-live="polite">
+      <strong>Did you know?</strong>
+      <p id="factText">Loading a fun space fact…</p>
+    </section>
+
     <div id="gallery" class="gallery">
       <div class="placeholder">
         <div class="placeholder-icon">🔭</div>
         <p>Select a date range and click "Get Space Images" to explore the cosmos!</p>
+      </div>
+    </div>
+    
+    <!-- Modal for showing enlarged image + details -->
+    <div id="modal" class="modal" aria-hidden="true">
+      <div class="modal-overlay" data-action="close"></div>
+      <div class="modal-content" role="dialog" aria-modal="true">
+        <button class="modal-close" aria-label="Close">✕</button>
+  <div class="modal-media"></div>
+        <div class="modal-meta">
+          <h2 class="modal-title"></h2>
+          <time class="modal-date"></time>
+          <p class="modal-explanation"></p>
+        </div>
       </div>
     </div>
   </div>
